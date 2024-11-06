@@ -1,0 +1,657 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+input{
+    outline: none;
+}
+
+input a{
+    
+    color: blue;
+}
+
+form a:hover{
+    text-decoration: underline;
+}
+
+.grid h1{
+    font-size: 1.5rem;
+    
+}
+
+.grid h3 {
+    font-size: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+p{
+    font-size: 10px;
+    text-align: center;
+    padding: 0 60px;
+    letter-spacing: 1px;
+}
+
+.well-text{
+    width: 100%;
+}
+
+.well-text p {
+    width: 400px;
+}
+.btn-primary{
+    background: #1f034d; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-secondary{
+    background: #cdc; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    color: #1f034d;
+}
+
+button{
+    outline: none;   
+    border: none;  
+    cursor: pointer;
+}
+
+
+.grid button{
+    padding: 10px 50px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+td a{
+    cursor: default;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    background-color: #32313112;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.social-container a {
+    margin: 5px;
+    padding: 0 10px;
+  
+}
+
+.social-container a svg{
+    background: #fff;
+    border: 1px solid #32313112;
+    height: 30px;
+    width: 40px;
+    font-size: 20px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;  
+}
+
+.container .grid .aside-login form{
+    row-gap: 10px;
+}
+
+form .input-space label{
+    width: 100%;
+}
+
+form .input-space .input{
+    border: 1px solid #100010;
+    outline: none;
+    width:100%;
+    height: 40px;
+    font-size: 13px;
+    color: #000;
+    padding-left: 5px;
+    background-color: transparent;
+    text-align: left;
+    border-radius: 5px; 
+}
+
+form input:focus{
+    box-shadow: 0 2px 0 rgb(0, 0, 0.5);
+}
+
+.input-space{
+    min-width: 100%;
+    text-align: left;
+    justify-content: left ;
+}
+
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.d-flex-column span{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.checkbox{ 
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid img{
+    width: 200px;
+}
+
+.aside{
+    background: linear-gradient(to right, #1f034d, #c800ff);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: top;
+    align-items: center;
+    color: #fff;
+}
+
+.aside button{
+    border: 2px solid #fff;
+}
+
+.aside-login{
+    border-radius: 20px 0 0 20px;
+}
+
+/* Dashboard */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    display: flex;
+    background:  #161a2d;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+/* .sidebar:hover{
+    width: 260px;
+} */
+
+.sidebar .side-header{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .side-header img{
+    border-radius: 50%;
+    width: 42px;
+}
+
+.sidebar .side-header h2{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.sidebar-links h4{
+    color: #fff;
+    font-weight:600;
+    position: relative;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+.sidebar-links h4 span{
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-seperator{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    transform: translateY(50%);
+    transform: scaleX(1);
+    transition: 0.2s;
+    transform-origin: right;
+
+}
+
+.sidebar:hover .sidebar-links .menu-seperator{
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.sidebar-links{
+    list-style: none;
+    height: 80%;
+    margin-top: 20px;
+    scrollbar-width: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links td{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links tr .hidden a{
+    margin-left: 50px;
+    color: #fff;
+}
+
+.sidebar-links tr .gestion a{
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.sidebar-links::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar-links tr li a{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-weight: 500px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.user-account{
+    padding: 2px 10px;
+    margin-top: auto;
+    margin-left: -10px;
+}
+
+.user-profile{
+    align-items: center;
+    display: flex;
+    color: #161a2d;
+}
+
+.user-profile img{
+    border: 2px solid #fff;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-profile h3{
+    font-weight: 600;
+    font-size: 0.775rem;
+    color: #bcc1cf;
+}
+
+.user-detail{
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.sidebar:hover .user-account{
+    background: #0c0000;
+    border-radius: 4px;
+}
+
+.icon{
+    width: 20px;
+}
+
+.d-flex .box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 5px;
+    color: #fff;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    background-color: #000;
+    transition: all 0.5s ease;
+}
+
+.d-flex:hover .box{
+    transform: rotateY(25deg);
+}
+
+.d-flex .box:hover~.box{
+    transform: rotateY(-25deg);
+}
+
+.d-flex .box .image-container{
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.d-flex .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 10px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.para-content{
+    background-color: #1f034d;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.para-content h4{
+    font-weight: 900;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.para-content p{
+    font-size: 1rem;
+}
+/* Otp-Code */
+
+.verify-code{
+    border-radius: 7px;
+    background-color:  #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 0;
+}
+
+.verify-code h2{
+    color: #444;
+    text-align: center;
+}
+
+.otp-code-container{
+    display: flex;
+    gap: 10px;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.otp-code-container input{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #8f8c8c;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.otp-code-container input:focus{
+    border-color: #007bff;
+}
+
+.button-container{
+    text-align: center;
+}
+
+.button-container button{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4e9ff5;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover{
+    transform: translateY(-5px);
+    background-color: #007bff;
+    box-shadow: rgba(100, 100, 111, 0.2), 0px 7px 29px 0px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+/* Home */
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.d-grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo-card h1::first-letter{
+    font-size: 3rem;
+    font-family: 'Great vibes';
+    color: blue;
+}
+
+.logo{
+    width: 120px;
+}
+
+.main {
+    height:60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 60px;
+}
+.main button{
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.banner{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url("../assets/Images/afro-american-woman-smiling-man.jpg");
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-fav{
+    height: 100px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin:0 30px; */
+}
+
+.card p{
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
+.card .logo-icon{
+    /* top: -10px; */
+    height: 30px;
+    border-radius: 5px;
+}
+
+.card .ideas{
+    display: flex;
+}
+
+.card .separator{
+    border-right: 1px solid #fff;
+    height: 60px;
+    top: 10px;
+}
+.banner .search input{
+    color: #000;
+    border-radius: 5px 0  0 5px;
+    border: none;
+    
+}
+
+.search{
+    display: flex;
+    height: 40px;
+}
+
+.search-job{
+    width: 350px;
+    padding-left: 5px;
+}
+
+.discover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b7b1b1;
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+}
+
+.discover label{
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.discover input{  
+   visibility: hidden;
+   cursor: pointer;
+}
+
+
+.business{
+    width: 200px;
+    top: -25px;
+    border-radius: 0 30px 0 30px;
+    position: relative;
+}
+
+.business-card .icon-card{
+    /* position: absolute; */
+    top: 20px;
+}
+
+.business-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.business-card .d-flex .card{
+    border-radius: 0 30px 0 30px;
+    background: #D9D9D9;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-card h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.business-card .card .icon-card{
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.business-card .card p ul{
+    padding-bottom: 20px 0;
+}
+
+footer .d-flex{
+    background: #455A64;
+    height: 300px;
+}
+
+/* demande */
+th, td{
+    padding: 0.3rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
